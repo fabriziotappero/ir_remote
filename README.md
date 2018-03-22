@@ -9,7 +9,7 @@ code was compiled using the [Espressif ESP32 toolchain].
 ## Electronic Schematic
 ![][ir_remote_sch]
 
-[ir_controller_sch]: https://github.com/fabriziotappero/ir_remote/blob/master/PCB/ir_remote_sch.png ""
+[ir_remote_sch]: https://github.com/fabriziotappero/ir_remote/blob/master/PCB/ir_remote_sch.png ""
 [Espressif ESP32 module]: https://www.espressif.com/en/products/hardware/development-boards
 [Espressif ESP32 toolchain]: https://dl.espressif.com/doc/esp-idf/latest/index.html
 [KiCad]: http://kicad-pcb.org/
