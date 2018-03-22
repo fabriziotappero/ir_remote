@@ -3,15 +3,15 @@ This repository contains the hardware and software implementation of a infrared
 remote control based on the [Espressif ESP32 module]. This module allow to remotely
 control any infrared camera like, in my case, the Sony NEX6 camera.
 
-![][ir_camera_remote]
+<p align="center">
+  <img src="https://github.com/fabriziotappero/ir_remote/blob/master/ir_camera_remote.jpg?raw=true" alt="Sublime's custom image"/>
+</p>
 
 Notice how an IR LED reader (U3) can be used to program the ESP32 so that the same
 remote can actually control any camera. 
 
 The schematic and PCB was designed using de EDA tool [KiCad] and all C++ 
 code was compiled using the [Espressif ESP32 toolchain].
-
-[ir_camera_remote]: https://github.com/fabriziotappero/ir_remote/blob/master/ir_camera_remote.jpg ""
 
 ## Electronic Schematic
 ![][ir_remote_sch]
