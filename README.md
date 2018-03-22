@@ -14,6 +14,14 @@ code was compiled using the [Espressif ESP32 toolchain].
 [Espressif ESP32 toolchain]: https://dl.espressif.com/doc/esp-idf/latest/index.html
 [KiCad]: http://kicad-pcb.org/
 
+## Electronic Schematic
+This is the 2 layer PCB designed to sit on top of a ESP32 evaluation board.
+
+![][ir_remote_pcb]
+
+[ir_remote_pcb]: https://github.com/fabriziotappero/ir_remote/blob/master/PCB/ir_remote_pcb.png ""
+
+
 ## Hardware And Software Tools
 
 Install **Kicad 5** on Debial-like Linux systems:
