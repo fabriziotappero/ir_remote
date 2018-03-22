@@ -14,7 +14,7 @@ code was compiled using the [Espressif ESP32 toolchain].
 [Espressif ESP32 toolchain]: https://dl.espressif.com/doc/esp-idf/latest/index.html
 [KiCad]: http://kicad-pcb.org/
 
-## Electronic Schematic
+## Printed Circuit Board
 This is the 2 layer PCB designed to sit on top of a ESP32 evaluation board.
 
 ![][ir_remote_pcb]
