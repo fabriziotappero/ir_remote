@@ -1,0 +1,600 @@
+EESchema Schematic File Version 4
+LIBS:ir_remote-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Camera Remote Control"
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L esp32-doit-evalkit:ESP32-DOIT-EVALKIT U1
+U 1 1 5A9D8152
+P 7550 3500
+F 0 "U1" H 7250 4300 60  0000 C CNN
+F 1 "ESP32-DOIT-EVALKIT" H 7550 2500 60  0000 C CNN
+F 2 "ir_remote:ESP32-DOIT-EVALKIT" H 7600 3500 60  0001 C CNN
+F 3 "" H 7600 3500 60  0001 C CNN
+F 4 "-" H 2950 700 50  0001 C CNN "Mouser"
+F 5 "ESP32 SoC Module" H 2950 700 50  0001 C CNN "Description"
+F 6 "3" H 7550 3500 50  0001 C CNN "Price, €/1ku"
+	1    7550 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5A9FC2AE
+P 6400 4100
+F 0 "D1" V 6400 4000 50  0000 R CNN
+F 1 "APTD1608LCGCK" V 6347 3983 50  0001 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 6400 4100 50  0001 C CNN
+F 3 "https://www.mouser.com/ds/2/216/APTD1608LCGCK-1102124.pdf" H 6400 4100 50  0001 C CNN
+F 4 "604-APTD1608LCGCK" V 6400 4100 50  0001 C CNN "Mouser"
+F 5 "LED SMD 0603 Green 570nm dome lens" V 6400 4100 50  0001 C CNN "Description"
+F 6 "0.1" H 1950 -550 50  0001 C CNN "Price, €/1ku"
+	1    6400 4100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5A9FC40B
+P 6400 4500
+F 0 "R2" H 6330 4454 50  0000 R CNN
+F 1 "2k" H 6330 4545 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6330 4500 50  0001 C CNN
+F 3 "none" H 6400 4500 50  0001 C CNN
+F 4 "RES 2k 1% 0603" H 6400 4500 60  0001 C CNN "Description"
+F 5 "-" H 1300 200 50  0001 C CNN "Mouser"
+	1    6400 4500
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5A9FC497
+P 6400 4700
+F 0 "#PWR04" H 6400 4450 50  0001 C CNN
+F 1 "GND" H 6405 4527 50  0000 C CNN
+F 2 "" H 6400 4700 50  0001 C CNN
+F 3 "" H 6400 4700 50  0001 C CNN
+	1    6400 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 4250 6400 4350
+Wire Wire Line
+	6850 3900 6400 3900
+Wire Wire Line
+	6400 3900 6400 3950
+Wire Wire Line
+	6400 4650 6400 4700
+Text Notes 800  7250 0    50   ~ 0
+REFERENCES\n\nhttp://www.technoblogy.com/show?ULT\nhttp://www.technoblogy.com/show?UVE#cite_note3\nhttp://www.technoblogy.com/show?VFT\n\nhttps://www.sbprojects.net/knowledge/ir/sirc.php\n\n
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5AA07EE7
+P 6100 4300
+F 0 "SW1" V 6100 4252 50  0000 R CNN
+F 1 "95C06B3GWRT" H 6100 4494 50  0001 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_B3S-1000" H 6100 4500 50  0001 C CNN
+F 3 "https://www.mouser.com/ds/2/626/Tact_95C06-335474.pdf" H 6100 4500 50  0001 C CNN
+F 4 "706-95C06B3GWRT" H 6100 4300 50  0001 C CNN "Mouser"
+F 5 "Tactile Switch, 0.197\" Height, gull wing" H 6100 4300 50  0001 C CNN "Description"
+	1    6100 4300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5AA08BB9
+P 5850 3800
+F 0 "R1" V 5643 3800 50  0000 C CNN
+F 1 "10k" V 5734 3800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5780 3800 50  0001 C CNN
+F 3 "none" H 5850 3800 50  0001 C CNN
+F 4 "RES 10k 1% 0603" H 5850 3800 60  0001 C CNN "Description"
+F 5 "-" H 750 -500 50  0001 C CNN "Mouser"
+	1    5850 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5AA08CED
+P 6100 4700
+F 0 "#PWR02" H 6100 4450 50  0001 C CNN
+F 1 "GND" H 6105 4527 50  0000 C CNN
+F 2 "" H 6100 4700 50  0001 C CNN
+F 3 "" H 6100 4700 50  0001 C CNN
+	1    6100 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 4100 6100 3800
+Wire Wire Line
+	6100 3800 6850 3800
+Text GLabel 5600 3800 0    50   Input ~ 0
+4V2
+Wire Wire Line
+	6100 4500 6100 4700
+Wire Wire Line
+	5600 3800 5700 3800
+Wire Wire Line
+	6000 3800 6100 3800
+Connection ~ 6100 3800
+$Comp
+L Device:LED D2
+U 1 1 5AA114C8
+P 8750 3650
+F 0 "D2" V 8742 3532 60  0000 R CNN
+F 1 "15400394A3590" V 8753 3728 60  0001 L CNN
+F 2 "LED_THT:LED_D5.0mm_Horizontal_O3.81mm_Z3.0mm" H 8950 3850 60  0001 L CNN
+F 3 "https://www.mouser.com/ds/2/445/15400394A3590-1113633.pdf" H 8950 3950 60  0001 L CNN
+F 4 "710-15400394A3590" V 8750 3650 50  0001 C CNN "Mouser"
+F 5 "Infrared Water color LED Receiver 5mm" V 8750 3650 50  0001 C CNN "Description"
+	1    8750 3650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5AA11692
+P 8750 4200
+F 0 "R4" H 8680 4154 50  0000 R CNN
+F 1 "120R" H 8680 4245 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 8680 4200 50  0001 C CNN
+F 3 "none" H 8750 4200 50  0001 C CNN
+F 4 "RES 120R 1% 0603" H 8750 4200 60  0001 C CNN "Description"
+F 5 "-" H 3650 -100 50  0001 C CNN "Mouser"
+	1    8750 4200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 5AA1173A
+P 8750 4450
+F 0 "#PWR010" H 8750 4200 50  0001 C CNN
+F 1 "GND" H 8850 4350 50  0000 C CNN
+F 2 "" H 8750 4450 50  0001 C CNN
+F 3 "" H 8750 4450 50  0001 C CNN
+	1    8750 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 3800 8750 4050
+Wire Wire Line
+	8750 4350 8750 4450
+Wire Wire Line
+	8200 3400 8750 3400
+Wire Wire Line
+	8750 3400 8750 3500
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 5AA156D6
+P 3650 3700
+F 0 "BT1" H 3768 3796 50  0000 L CNN
+F 1 "SM02B-SRSS-TB (LF)(SN)" H 3700 3650 50  0000 L CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53261-0271_1x02_P1.25mm_Horizontal" V 3650 3760 50  0001 C CNN
+F 3 "http://uk.farnell.com/jst-japan-solderless-terminals/sm02b-srss-tb-lf-sn/header-r-a-2way/dp/1679117" V 3650 3760 50  0001 C CNN
+F 4 "2pin connector for Lithium battery" H 3650 3700 50  0001 C CNN "Description"
+F 5 "-" H -2050 -2850 50  0001 C CNN "Mouser"
+F 6 "1679117" H 3650 3700 50  0001 C CNN "Farnel"
+F 7 "JST" H 3650 3700 50  0001 C CNN "MAN"
+F 8 "SM02B-SRSS-TB (LF)(SN)" H 3650 3700 50  0001 C CNN "MPN"
+	1    3650 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5AA16F22
+P 3650 3900
+F 0 "#PWR01" H 3650 3650 50  0001 C CNN
+F 1 "GND" H 3655 3727 50  0000 C CNN
+F 2 "" H 3650 3900 50  0001 C CNN
+F 3 "" H 3650 3900 50  0001 C CNN
+	1    3650 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 3800 3650 3900
+$Comp
+L Device:C C1
+U 1 1 5AA188B1
+P 6200 3150
+F 0 "C1" H 6086 3196 50  0000 R CNN
+F 1 "4.7uF" H 6086 3105 50  0000 R CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric" H 6238 3000 50  0001 C CNN
+F 3 "none" H 6200 3150 50  0001 C CNN
+F 4 "CAP 4.7uF 100V X7S 20% 1210" H 6200 3150 60  0001 C CNN "Description"
+F 5 "963-HMK325C7475MM-PE" H 6200 3150 60  0001 C CNN "Mouser"
+F 6 "0.3" H 6200 3150 50  0001 C CNN "Price, €/1ku"
+	1    6200 3150
+	1    0    0    -1  
+$EndComp
+Text GLabel 6000 2900 0    50   Input ~ 0
+4V2
+Wire Wire Line
+	6850 2900 6200 2900
+$Comp
+L power:GND #PWR03
+U 1 1 5AA01CAD
+P 6200 3350
+F 0 "#PWR03" H 6200 3100 50  0001 C CNN
+F 1 "GND" H 6205 3177 50  0000 C CNN
+F 2 "" H 6200 3350 50  0001 C CNN
+F 3 "" H 6200 3350 50  0001 C CNN
+	1    6200 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 2900 6200 3000
+Connection ~ 6200 2900
+Wire Wire Line
+	6200 2900 6000 2900
+Wire Wire Line
+	6200 3300 6200 3350
+NoConn ~ 8200 2900
+$Comp
+L power:GND #PWR09
+U 1 1 5AA02408
+P 8550 3000
+F 0 "#PWR09" H 8550 2750 50  0001 C CNN
+F 1 "GND" V 8555 2872 50  0000 R CNN
+F 2 "" H 8550 3000 50  0001 C CNN
+F 3 "" H 8550 3000 50  0001 C CNN
+	1    8550 3000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8200 3000 8550 3000
+NoConn ~ 6850 4000
+NoConn ~ 6850 4100
+NoConn ~ 6850 4200
+NoConn ~ 6850 4300
+NoConn ~ 6850 3300
+NoConn ~ 6850 3200
+NoConn ~ 6850 3100
+NoConn ~ 8200 3500
+NoConn ~ 8200 3600
+NoConn ~ 8200 3700
+NoConn ~ 8200 3800
+NoConn ~ 8200 3900
+NoConn ~ 8200 4000
+$Comp
+L power:GND #PWR06
+U 1 1 5AA05136
+P 6750 3000
+F 0 "#PWR06" H 6750 2750 50  0001 C CNN
+F 1 "GND" V 6755 2872 50  0000 R CNN
+F 2 "" H 6750 3000 50  0001 C CNN
+F 3 "" H 6750 3000 50  0001 C CNN
+	1    6750 3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6750 3000 6850 3000
+NoConn ~ 8200 4100
+NoConn ~ 8200 4200
+NoConn ~ 8200 4300
+$Comp
+L dk_Optical-Sensors-Photo-Detectors-Remote-Receiver:TSOP38238 U3
+U 1 1 5AA083F3
+P 9600 3200
+F 0 "U3" H 9850 3350 60  0000 R CNN
+F 1 "TSOP38238" V 9400 3350 60  0000 R CNN
+F 2 "LED_THT:LED_Rectangular_W5.0mm_H2.0mm-3Pins" H 9800 3400 60  0001 L CNN
+F 3 "https://www.mouser.com/ds/2/427/tsop382-531411.pdf" H 9800 3500 60  0001 L CNN
+F 4 "782-TSOP38238" H 9800 3700 60  0001 L CNN "Mouser"
+F 5 "Infrared receiver IC 38kHz" H 2950 700 50  0001 C CNN "Description"
+	1    9600 3200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 5AA086F4
+P 9600 3800
+F 0 "#PWR011" H 9600 3550 50  0001 C CNN
+F 1 "GND" H 9605 3627 50  0000 C CNN
+F 2 "" H 9600 3800 50  0001 C CNN
+F 3 "" H 9600 3800 50  0001 C CNN
+	1    9600 3800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 3700 9600 3800
+Text GLabel 9600 2800 1    50   Input ~ 0
+4V2
+Wire Wire Line
+	9600 2900 9600 2800
+$Comp
+L Device:C C2
+U 1 1 5AA08BEB
+P 10000 3250
+F 0 "C2" H 9886 3296 50  0000 R CNN
+F 1 "4.7uF" H 9886 3205 50  0000 R CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric" H 10038 3100 50  0001 C CNN
+F 3 "none" H 10000 3250 50  0001 C CNN
+F 4 "CAP 4.7uF 100V X7S 20% 1210" H 10000 3250 60  0001 C CNN "Description"
+F 5 "963-HMK325C7475MM-PE" H 10000 3250 60  0001 C CNN "Mouser"
+F 6 "0.3" H 10000 3250 50  0001 C CNN "Price, €/1ku"
+	1    10000 3250
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 2900 10000 2900
+Wire Wire Line
+	10000 2900 10000 3100
+Connection ~ 9600 2900
+$Comp
+L power:GND #PWR012
+U 1 1 5AA08FBE
+P 10000 3800
+F 0 "#PWR012" H 10000 3550 50  0001 C CNN
+F 1 "GND" H 10005 3627 50  0000 C CNN
+F 2 "" H 10000 3800 50  0001 C CNN
+F 3 "" H 10000 3800 50  0001 C CNN
+	1    10000 3800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 3400 10000 3800
+Wire Wire Line
+	8200 3300 9200 3300
+$Comp
+L Battery_Management:MCP73811T-435I-OT U2
+U 1 1 5AB3B855
+P 2900 3400
+F 0 "U2" H 3050 3650 50  0000 L CNN
+F 1 "MCP73832T2DFI/OT" H 2952 3131 50  0001 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 2950 3150 50  0001 L CNN
+F 3 "https://www.mouser.es/ds/2/268/20001984g-846362.pdf" H 2650 3650 50  0001 C CNN
+F 4 "579-MCP73832T2DFI/OT" H 2900 3400 50  0001 C CNN "Mouser"
+F 5 "Battery Management IC, Microchip 4.2V" H 2900 3400 50  0001 C CNN "Description"
+F 6 "0.56" H 2900 3400 50  0001 C CNN "Price, €/1ku"
+	1    2900 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5AB3B937
+P 2900 3900
+F 0 "#PWR08" H 2900 3650 50  0001 C CNN
+F 1 "GND" H 2905 3727 50  0000 C CNN
+F 2 "" H 2900 3900 50  0001 C CNN
+F 3 "" H 2900 3900 50  0001 C CNN
+	1    2900 3900
+	1    0    0    -1  
+$EndComp
+Text GLabel 3950 3300 2    50   Input ~ 0
+4V2
+Wire Wire Line
+	2900 3700 2900 3900
+$Comp
+L Connector_Specialized:USB_B_Micro J1
+U 1 1 5AB3C351
+P 1350 3250
+F 0 "J1" H 1405 3717 50  0000 C CNN
+F 1 "105017-0001" H 1405 3626 50  0000 C CNN
+F 2 "Connector_USB:USB_Micro-B_Molex-105017-0001" H 1500 3200 50  0001 C CNN
+F 3 "https://www.mouser.es/ds/2/276/1050170001_IO_CONNECTORS-230168.pdf" H 1500 3200 50  0001 C CNN
+F 4 "538-105017-0001" H 1350 3250 50  0001 C CNN "Mouser"
+F 5 "Molex USB Connectors MICRO B Receptacle" H 1350 3250 50  0001 C CNN "Description"
+F 6 "0.60" H 1350 3250 50  0001 C CNN "Price, €/1ku"
+	1    1350 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5AB3C3D5
+P 1350 3800
+F 0 "#PWR05" H 1350 3550 50  0001 C CNN
+F 1 "GND" H 1355 3627 50  0000 C CNN
+F 2 "" H 1350 3800 50  0001 C CNN
+F 3 "" H 1350 3800 50  0001 C CNN
+	1    1350 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 3650 1250 3700
+Wire Wire Line
+	1250 3700 1350 3700
+Wire Wire Line
+	1350 3700 1350 3800
+Wire Wire Line
+	1350 3650 1350 3700
+Connection ~ 1350 3700
+Wire Wire Line
+	1650 3050 2000 3050
+Wire Wire Line
+	2900 3050 2900 3100
+NoConn ~ 1650 3250
+NoConn ~ 1650 3350
+NoConn ~ 1650 3450
+NoConn ~ 2500 3300
+$Comp
+L Device:R R3
+U 1 1 5AB3EF73
+P 2350 3700
+F 0 "R3" H 2280 3654 50  0000 R CNN
+F 1 "2k" H 2280 3745 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2280 3700 50  0001 C CNN
+F 3 "none" H 2350 3700 50  0001 C CNN
+F 4 "RES 2k 1% 0603" H 2350 3700 60  0001 C CNN "Description"
+F 5 "-" H -2750 -600 50  0001 C CNN "Mouser"
+	1    2350 3700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2500 3500 2350 3500
+Wire Wire Line
+	2350 3500 2350 3550
+$Comp
+L power:GND #PWR07
+U 1 1 5AB3FB9B
+P 2350 3900
+F 0 "#PWR07" H 2350 3650 50  0001 C CNN
+F 1 "GND" H 2355 3727 50  0000 C CNN
+F 2 "" H 2350 3900 50  0001 C CNN
+F 3 "" H 2350 3900 50  0001 C CNN
+	1    2350 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 3850 2350 3900
+Wire Wire Line
+	3650 3300 3650 3500
+Wire Wire Line
+	3300 3300 3450 3300
+Wire Wire Line
+	3650 3300 3950 3300
+Connection ~ 3650 3300
+Text Notes 1950 2700 0    59   ~ 12
+1-CELL BATTERY CHARGER
+$Comp
+L Device:C C3
+U 1 1 5AB4429B
+P 2000 3450
+F 0 "C3" H 2050 3550 50  0000 L CNN
+F 1 "4.7uF" H 2050 3350 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric" H 2038 3300 50  0001 C CNN
+F 3 "none" H 2000 3450 50  0001 C CNN
+F 4 "CAP 4.7uF 100V X7S 20% 1210" H 2000 3450 60  0001 C CNN "Description"
+F 5 "963-HMK325C7475MM-PE" H 2000 3450 60  0001 C CNN "Mouser"
+F 6 "0.3" H 2000 3450 50  0001 C CNN "Price, €/1ku"
+	1    2000 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 3050 2000 3300
+Connection ~ 2000 3050
+Wire Wire Line
+	2000 3050 2900 3050
+$Comp
+L power:GND #PWR013
+U 1 1 5AB4592A
+P 2000 3900
+F 0 "#PWR013" H 2000 3650 50  0001 C CNN
+F 1 "GND" H 2005 3727 50  0000 C CNN
+F 2 "" H 2000 3900 50  0001 C CNN
+F 3 "" H 2000 3900 50  0001 C CNN
+	1    2000 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 3600 2000 3900
+$Comp
+L Connector_Specialized:Test_Point TP3
+U 1 1 5AB46B92
+P 3450 3300
+F 0 "TP3" H 3500 3450 50  0000 L CNN
+F 1 "Test_Point" H 3508 3329 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 3650 3300 50  0001 C CNN
+F 3 "~" H 3650 3300 50  0001 C CNN
+F 4 "Test point - not a component" H 3450 3300 50  0001 C CNN "Description"
+F 5 "-" H -1950 -2850 50  0001 C CNN "Mouser"
+	1    3450 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Specialized:Test_Point TP2
+U 1 1 5AB470B2
+P 6750 3700
+F 0 "TP2" V 6750 3950 50  0000 C CNN
+F 1 "Test_Point" H 6808 3729 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 6950 3700 50  0001 C CNN
+F 3 "~" H 6950 3700 50  0001 C CNN
+F 4 "Test point - not a component" H 6750 3700 50  0001 C CNN "Description"
+F 5 "-" H 2950 700 50  0001 C CNN "Mouser"
+	1    6750 3700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6850 3700 6750 3700
+$Comp
+L Connector_Specialized:Test_Point TP1
+U 1 1 5AB47D10
+P 6750 3600
+F 0 "TP1" V 6750 3850 50  0000 C CNN
+F 1 "Test_Point" H 6808 3629 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 6950 3600 50  0001 C CNN
+F 3 "~" H 6950 3600 50  0001 C CNN
+F 4 "Test point - not a component" H 6750 3600 50  0001 C CNN "Description"
+F 5 "-" H 2950 700 50  0001 C CNN "Mouser"
+	1    6750 3600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6850 3600 6750 3600
+$Comp
+L Connector_Specialized:Test_Point TP4
+U 1 1 5AB4871C
+P 8250 3100
+F 0 "TP4" V 8250 3350 50  0000 C CNN
+F 1 "Test_Point" H 8308 3129 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 8450 3100 50  0001 C CNN
+F 3 "~" H 8450 3100 50  0001 C CNN
+F 4 "Test point - not a component" H 8250 3100 50  0001 C CNN "Description"
+F 5 "-" H 2950 700 50  0001 C CNN "Mouser"
+	1    8250 3100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8200 3100 8250 3100
+$Comp
+L Connector_Specialized:Test_Point TP5
+U 1 1 5AB490D7
+P 8250 3200
+F 0 "TP5" V 8250 3450 50  0000 C CNN
+F 1 "Test_Point" H 8308 3229 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 8450 3200 50  0001 C CNN
+F 3 "~" H 8450 3200 50  0001 C CNN
+F 4 "Test point - not a component" H 8250 3200 50  0001 C CNN "Description"
+F 5 "-" H 2950 700 50  0001 C CNN "Mouser"
+	1    8250 3200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8200 3200 8250 3200
+$Comp
+L Connector_Specialized:Test_Point TP6
+U 1 1 5AB4EC51
+P 6750 3400
+F 0 "TP6" V 6750 3650 50  0000 C CNN
+F 1 "Test_Point" H 6808 3429 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 6950 3400 50  0001 C CNN
+F 3 "~" H 6950 3400 50  0001 C CNN
+F 4 "Test point - not a component" H 6750 3400 50  0001 C CNN "Description"
+F 5 "-" H 2950 700 50  0001 C CNN "Mouser"
+	1    6750 3400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector_Specialized:Test_Point TP7
+U 1 1 5AB4ED29
+P 6750 3500
+F 0 "TP7" V 6750 3750 50  0000 C CNN
+F 1 "Test_Point" H 6808 3529 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_1.0x1.0mm" H 6950 3500 50  0001 C CNN
+F 3 "~" H 6950 3500 50  0001 C CNN
+F 4 "Test point - not a component" H 6750 3500 50  0001 C CNN "Description"
+F 5 "-" H 2950 700 50  0001 C CNN "Mouser"
+	1    6750 3500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6750 3400 6850 3400
+Wire Wire Line
+	6750 3500 6850 3500
+Connection ~ 3450 3300
+Wire Wire Line
+	3450 3300 3650 3300
+Text Notes 3702 3284 0    47   ~ 0
+4.2V
+Text Notes 2092 3040 0    47   ~ 0
+5V, 500mA
+Text Notes 800  6400 0    50   ~ 0
+POSSIBLE LITHIUM BATTERY\nhttps://www.mouser.es/ProductDetail/MikroElektronika/MIKROE-2759?qs=sGAEpiMZZMuXcNZ31nzYhQAJSS1LZ%2fequKl8QLcAIc8%3d\n
+$EndSCHEMATC
