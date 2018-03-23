@@ -7,8 +7,8 @@ control any infrared camera like, in my case, the Sony NEX6 camera.
   <img src="https://github.com/fabriziotappero/ir_remote/blob/master/ir_camera_remote.jpg?raw=true" alt="Sublime's custom image"/>
 </p>
 
-Notice how an IR LED reader (U3) can be used to program the ESP32 so that the same
-remote can actually control any camera. 
+Notice how an IR reader (U3) can be used to program the ESP32 so that the same
+remote can actually control any given camera. 
 
 The schematic and PCB was designed using de EDA tool [KiCad] and all C++ 
 code was compiled using the [Espressif ESP32 toolchain].
@@ -22,7 +22,8 @@ code was compiled using the [Espressif ESP32 toolchain].
 [KiCad]: http://kicad-pcb.org/
 
 ## Printed Circuit Board
-This is the 2 layer PCB designed to sit on top of a ESP32 evaluation board.
+This is the 2 layer PCB designed to sit on top of a ESP32 evaluation board. Notice the castellated
+mounting holes.
 
 ![][ir_remote_pcb]
 
